@@ -15,13 +15,13 @@
         O primeiro passo, é preencher esse formulário de inscrição
       </p>
     </header> 
-    <form action="">
+    <form id="my-form">
       <!-- conjunto de campos -->
       <fieldset>
         <legend>Informações do Evento</legend>
         <div class="input-wrapper">
                <label for="event-title">Titulo do evento <span>(minimo 8 caracteres)</span></label>
-                      <input type="text" name="titulo" id="titulo">
+                      <input type="text" name="event-titulo" id="event-titulo" required minlength="8">
         </div>
         <div class="input-wrapper">
           <label for="link-event">Link do evento <span>(comece com https://)</span></label> 
@@ -29,7 +29,7 @@
         </div>
           <div class="input-wrapper">
             <label for="event-whatsapp">Whatsapp para contato <span>(somente números)</span></label>
-                  <input type="number" name="contato" id="event-whatsapp">
+                  <input type="number" name="contato" id="event-whatsapp" required >
             
           </div>
          <div class="input-wrapper">
@@ -54,12 +54,12 @@
           <legend>Privacidade</legend>
           <div class="input-wrapper">
             <label for="event-email">E-mail do administrador <span>(digite um email válido)</span></label>
-                 <input type="text" name="" id="event-email">
+                 <input type="text" name="" id="event-email" required>
           </div>
           
           <div class="input-wrapper">
             <label for="event-password">Senha de acesso para os participantes <span>(mínimo de 8 caracteres)</span></label>
-                 <input type="password" name="" id="event-password">
+                 <input type="password" name="" id="event-password" required minlength="8">
           </div>
          <div class="checkbox-wrapper">
                 <input type="checkbox" name="" id="event-private"> 
@@ -93,7 +93,7 @@
     </form>
 
     <div class="rodape">
-      <input type="submit" value="Salvar evento"name="" id="event-submit">
+      <input type="submit" form="my-form" value="Salvar evento"name="" id="event-submit">
     </div>
   </div>
   
